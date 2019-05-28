@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  background-color: black;
+  padding: 20px;
+  text-align: left;
+}
+img {
+  float: left;
+}
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color:grey;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-right: 0.2px solid black;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+#a_1:link, #a_1:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+#a_1:hover, #a_1:active {
+  background-color: orange;
+}
+</style>
+</head>
+<body>
+
+<div class="header" style="text-decoration: none;">
+  <a href="#" style="text-decoration: none;"><h1><span style="color:white;">HTML</span><span style="color:orange;font-size: 36px;"><b>5</b></span></h1></a>
+</div>
+
+<div class="topnav">
+  <a href="#">Link1</a>
+  <a href="#">Link2</a>
+  <a href="#">Link3</a>
+  <a href="#">Link4</a>
+  <a href="#">Link5</a>
+</div>
+
+<div class="row">
+
+  <div class="leftcolumn">
+
+    <div class="card">
+ 
+      <p><img src="subpost-image.jpg" alt="Pineapple" style="width:200px;height:170px;margin-right:15px;">
+      <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.</p>
+      <a href="#" target="_blank"><h5 id="a_1">Read More...</h5></a>
+    </div>
+</body>
+</html>

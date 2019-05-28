@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Json</title>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+<h2>Listing JSON Data</h2>
+
+<ul>
+
+	<li ></li>
+
+</ul>
+
+
+
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+	var user="";
+$.getJSON("posts.json",function(obj){
+  $.each(obj, function(key, value){
+
+     	user+= "<li><b><u>UserId:</b></u>"+value.userId+"</li>"+"<li><b><u>id:<b></u>"+value.id+"</li>"+"<li><b><u>title:</b></u>"+value.title+"</li>"+"<li><b><u>description:</b></u>"+value.body+"</li>";
+    
+    });
+$('ul').html(user);
+
+
+});
+
+});
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+
+
+
+</html>

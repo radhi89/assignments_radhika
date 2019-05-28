@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<document>
+	<title>XML</title>
+	<article1>
+		<subtitle1>What is XML?</subtitle1>
+			<note>XML is heavily used as a format for document storage and processing, both online and offline.Content-based XML 					markup enhances searchability, making it possible for agents and search engines to categorize data instead of 					wasting processing power on context-based full-text searches.XML is extensible, because it only specifies the 					structural rules of tags. No specification on tags them self.XML does not allow References to external data 					entities. Named character references are not allowed in XML. XML does not allow empty comment declaration.
+			</note>
+	</article1>
+	<article2>
+		<subtitle2>Uses of XML</subtitle2>
+		<uses>
+			<use1>Web publishing
+				<note> XML allows you to create interactive pages, allows the customer to customize those pages, and 						makes creating e-commerce applications more intuitive. With XML, you store the data once and 						then render that content for different viewers or devices based on style sheet processing using 					an Extensible Style Language (XSL)/XSL Transformation (XSLT) processor.
+				</note>
+			</use1>
+			<use2>Web searching and automating Web tasks
+				<note>XML defines the type of information contained in a document, making it easier to return useful 						results when searching the Web
+				</note>
+			</use2>
+			<use3>General applications
+				<note>XML provides a standard method to access information, making it easier for applications and devices of 						all kinds to use, store, transmit, and display data.
+				</note>
+			</use3>
+			<use4>e-business applications
+				<note> XML implementations make electronic data interchange (EDI) more accessible for information interchange, 					business-to-business transactions, and business-to-consumer transactions.
+				</note>
+			</use4>
+			<use5>Pervasive computing
+				<note>XML provides portable and structured information types for display on pervasive (wireless) computing 						devices such as personal digital assistants (PDAs), cellular phones,andothers.				 					</note>
+			</use5>
+		</uses>
+	</article2>
+</document>
+
+
+

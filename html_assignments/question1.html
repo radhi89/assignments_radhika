@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 	<title>HTML Form</title>
+</head>
+<script>
+function myFunction() {
+  var x = document.getElementById("add").value;
+   document.getElementById("same").value = x;
+ 
+}
+</script>
+<style type="text/css">
+	
+	body{
+		background-color: rgb(255, 255, 184);
+	}
+</style>
+<body>
+ 
+	<form method="" action="">
+ 		<fieldset>
+ 			<legend style="font-weight:bold;font-size: 30px;"><b>Student Registration Form</b></legend>
+		<table border="1" align="center" width="600" height="800" bgcolor="white">
+ 			<tr>
+ 				<th>First Name : </th>
+ 					<td><input type="text" name="fn" id="fn1" title="Enter your first name" placeholder="Enter your first name" required/></td>
+ 			</tr>
+ 			<tr>
+ 				<th>Last Name : </th>
+  					<td><input type="text" name="ln" title="Enter your last name" placeholder="Enter your last name"></td>
+ 
+			</tr>
+			<tr>
+ 				<th>Gender : </th>
+ 					<td>Male<input type="radio" name="g" value="m"/>
+					Female<input type="radio" name="g" value="f"/>
+ 					</td>
+ 			</tr>
+			<tr>
+				<th>Admission for : </th>
+					<td><input list="class" name="class" placeholder="Select class">
+  						<datalist id="class">
+    						<option value="LKG">
+    						<option value="UKG">
+    						<option value="I">
+    						<option value="V">
+    						<option value="VIII">
+    						<option value="others">
+    						</datalist><br>
+    						<span>If Others : <input type="number"></span>
+  						
+			</tr>
+			<tr>
+ 				<th>Date Of Birth : </th>
+ 					<td><input placeholder="Select DOB"type="date"/></td>
+ 			</tr>
+			<tr>
+				<th>Age : </th>
+				<td><input placeholder="Y" maxlength="2" size="2">years<input  placeholder="M" maxlength="2" size="2">months</td>
+			</tr>
+			<tr>
+				<th>Blood Group : </th>
+				<td><input  placeholder="Enter.."maxlength="2" size="2"></td>
+			</tr>
+			<tr>
+				<th>Nationality : </th>
+ 					<td>
+ 						<input placeholder="Enter nationality.." list="nationality" name="nationality">
+  						<datalist id="nationality">
+    						<option value="Indian" selected>
+    						<option value="non-Indian">
+    					</datalist>
+ 					</td>
+ 			</tr>
+			<tr>
+				<th>Religion : </th>
+				<td><input type="text" name="Religion" placeholder="Enter the religion.."></td>
+				
+			</tr>
+			<tr>
+				<th>Caste : </th>				
+				<td><input type="text" name="caste" placeholder="Enter the caste.."></td>
+			</tr>
+			<tr>
+				<th>Permanent Address : </th>
+ 					<td><textarea id = "add" rows="8" cols="20" placeholder="Enter.."></textarea></td>
+ 
+			</tr>
+			<tr>
+				<th>Same as above address : </th>
+				<td><input type="checkbox" id="check" onchange="myFunction();"></td>
+			<tr>
+				<th>Communication Address : </th>
+					<td><textarea id="same" rows="8" cols="20"></textarea></td>
+ 
+			</tr>
+			<tr>
+ 				<th>Parent/Gaurdian Name : </th>
+ 					<td><input type="text" name="pn" title="Enter here.." placeholder="enter name"></td>
+ 			</tr>
+ 			<tr>
+ 				<th>Occupation : </th>
+ 					<td><input type="text" placeholder="Enter here.."></td>
+ 			</tr>
+ 			<tr>
+ 				<th>Email : </th>
+ 					<td><input placeholder="Enter your email.." type="email"/></td>
+ 			</tr>
+ 			<tr>
+ 				<th>Mobile No : </th>
+ 					<td><input placeholder="Enter phone no:.." type="number"/></td>
+ 			</tr>
+ 			<tr>
+ 				<th>Transportation</th>
+ 					<td>School Bus<input type="checkbox" name="x[]" value="h"/>
+					Private Van<input type="checkbox" name="x[]" value="h2"/>
+					Self<input type="checkbox" name="x[]" value="h3"/>
+ 					</td>
+ 			</tr>
+			<tr>
+ 
+				<th>Upload your pic</th>
+ 					<td><input type="file"/></td>
+ 
+			</tr>
+ 			<tr>
+ 				<td colspan="2" align="center"><input type="submit" value="Save My Data"/>
+ 
+				<input type="reset" value="Reset Data"/>
+ 
+				</td>
+ 
+			</tr>
+ 
+		</table>
+ 
+</form>
+ 
+</body>
+ 
+</html>

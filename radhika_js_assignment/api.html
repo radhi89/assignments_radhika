@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    
+</head>
+  
+<script>
+
+var xmlhttp = new XMLHttpRequest();
+var url = "all.txt";
+
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    var myArr = JSON.parse(this.responseText);
+    myFunction(myArr);
+  }
+}
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+
+function myFunction(myObj) {
+            var i, j, x = "";
+               for (i in myObj.RestResponse.result) {
+  x += "<option>"+ myObj.RestResponse.result[i].name +"</option>" ;
+  
+}
+document.getElementById("demo").innerHTML = x;
+         }
+               
+            
+</script>
+    </script>
+    </head>  
+    <body style="font:14px Calibri;">
+<fieldset>
+    <legend>Country Names :</legend>
+
+    <p>This SELECT Dropdown list is filed using JSON data from an external file!</p>
+
+    <select id="demo" onchange="show(this)">
+        <option value="">-- Select Country --</option>
+    </select>
+</fieldset>
+ 
+</body>
+</html>  

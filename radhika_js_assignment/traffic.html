@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style> 
+ .traffic-light
+{
+	position: absolute;
+  width:70px;
+  height:200px;
+
+  background-color:gray;
+}
+
+.light
+{
+  width:60px;
+  height:60px;
+  border:1px solid;
+
+  border-radius: 50px;
+}
+
+.red
+{
+  background-color:red;
+}
+.amber
+{
+  background-color:yellow;
+}
+.green
+{
+background-color: green;
+	
+}
+.container
+{
+	position:relative;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+}
+.off
+{
+  background-color:transparent;
+ }
+</style>
+<body>
+	<div class="container">
+<div class="traffic-light">
+  <div class="light off" id="red"></div>
+  <div class="light off" id="amber"></div>
+  <div class="light off" id="green"></div>
+</div>
+<br>
+<br>
+<button id="off" onclick="clear()">Turn Off</button>
+<button id="changegreen" style = "background-color:green;" >Turn on Green</button>
+<button id="changered" style = "background-color:red;" >Turn on Red</button>
+<button  id ="blink" style = "border-color: yellow;" onclick="Blink()">Blink Yellow</button>
+<button id = "a" onclick="launchAuto();">Automatic</button>
+</div>
+<script type="text/javascript">
+	var lightStates = {red:0,amber:1,green:2};
+	var currentState = lightStates.red;
+
+	interval = "";
+	function launchAuto()
+	{
+		clear();
+  	if(interval == "")
+  	{
+    interval = setInterval(function(){
+    changeState();}, 1000);
+  	}
+  	else
+  	{
+      clearInterval(interval);
+  	}
+	}
+	
+	function Blink()
+	{
+		clear();
+  	document.getElementById("amber").className="light amber";
+  	setTimeout(function(){
+    setblink();}, 1000)
+	}
+
+	function setblink()
+	{
+  	document.getElementById("amber").className="light off";
+  	setTimeout(function(){
+    Blink();}, 1000)
+	}
+	
+  	function changeState()
+	{
+    clear();
+  	switch(currentState)
+  	{
+    case lightStates.red:
+    {
+      document.getElementById("red").className ="light red";
+      currentState =  lightStates.amber;
+    }
+    break;
+    case lightStates.amber:
+    {
+      document.getElementById("amber").className ="light amber";
+      currentState = lightStates.green;
+    } break;
+     case lightStates.green:
+    {
+      document.getElementById("green").className ="light green";
+      currentState = lightStates.red;
+    } break;
+ 	
+   	}
+	}
+
+
+
+	document.getElementById('changegreen').onclick=function(){
+    changeGreen();
+	};
+	function changeGreen()
+	{
+    clear();
+    document.getElementById("green").className = "light green";
+	}
+
+	document.getElementById('changered').onclick=function(){
+    changeRed();
+	};
+	function changeRed()
+	{
+    clear();
+    document.getElementById("red").className = "light red";
+	}
+	
+	
+
+
+   function clear(){
+   	
+   document.getElementById("red").className ="light off";
+   document.getElementById("amber").className ="light off";
+   document.getElementById("green").className ="light off";
+	}
+	
+
+
+
+</script>
+</body>
+</html>

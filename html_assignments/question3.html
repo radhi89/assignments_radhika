@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sample LayOut</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Times New Roman, Helvetica, sans-serif;
+  
+}
+
+/* Style the header */
+header {
+ background-color: #b3ffb3;
+  padding: 25px;
+  text-align: left;
+  font-size: 30px;
+   margin-top:5px;
+  color:black;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 400px; /* only for demonstration, should be removed */
+  background: #ccc;
+   margin-top:5px;
+   text-align: left;
+  padding: 5px;
+  font-size: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+
+}
+
+article {
+  float: left;
+  padding: 5px;
+  font-size: 20px;
+   margin-top:5px;
+  width: 70%;
+ 
+  background-color: #f1f1f1;
+  height: 400px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+footer {
+  background-color: #b3ffb3;
+  padding: 1px;
+  text-align: center;
+   margin-top:5px;
+  color: black;
+  font-size: 20px;
+}
+
+
+@media (max-width: 800px) {
+  nav, article {
+   
+    height: 10px;
+    text-align: left;
+  }
+}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+	<header>
+  		<h3>This is Web Page Main Title</h3>
+	</header>
+
+<section>
+  <nav>
+  	<strong>Main Menu</strong>
+    	<ul>
+      		<li>HTML</a></li>
+      		<li>PHP</a></li>
+      		<li>Perl..</a></li>
+    	</ul>
+  </nav>
+  
+  	<article>
+    	Technical and Managerial Tutorials.
+  	</article>
+
+
+</section>
+
+	<footer>
+  		<p>My Site</p>
+	</footer>
+</body>
+</html>

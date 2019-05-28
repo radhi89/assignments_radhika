@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Shopping </title>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {
+  box-sizing: border-box;
+}
+#mymodal1.row {
+{
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+}
+#mymodal1.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+#mymodal1.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+#mymodal1.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+#mymodal1.col-25,
+#mymodal1.col-50,
+#mymodal1.col-75 {
+  padding: 0 16px;
+}
+
+#mymodal1.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+#mymodal1.input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+#mymodal1.label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+#mymodal1..icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+#mymodal1.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+#mymodal1.btn:hover {
+  background-color: #45a049;
+}
+
+#mymodal1 a {
+  color: #2196F3;
+}
+
+#mymodal1 hr {
+  border: 1px solid lightgrey;
+}
+
+#mymodal1 span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  #mymodal1.row {
+    flex-direction: column-reverse;
+  }
+  #mymodal1.col-25 {
+    margin-bottom: 20px;
+  }
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  padding: 80px;
+  background-image: url("logo.jpg");
+  background-repeat: no-repeat;
+  background-position: left;
+
+}
+tr,th{
+  font-weight: normal;
+  font-family: 'Antiqua';
+  text-align: justify-all;
+  padding-right: 10px;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 50%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: white;
+}
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: black;
+  font-family:'Antiqua';
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+.modal-header, h4, .close {
+    background-color:#FF8C00;
+    color:white !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-footer {
+    background-color: #f9f9f9;
+  }
+/* Main column */
+.main {   
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+.carousel-inner img {
+      width: 100%;
+      height: 100%;
+  }
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a,input,button {
+    float: none;
+    width:100%;
+  }
+}
+/* Position the image container (needed to position the left and right arrows) */
+
+
+img {vertical-align: middle;position: center;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+ 
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
+  
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+ 
+ 
+</div>
+
+<div class="navbar">
+  <a href="#" id="flip">women</a>
+
+  <a href="#" id="flip">men</a>
+  <a href="#" id="flip">kids</a>
+  <a href="#" id="flip">accessories</a>
+  <a href="#" id="flip">sports</a>
+  <a href="#" id="flip">home & living</a>
+
+
+  <a href="#" id="sign" class="right">Sign In</a>
+  <a href="#" id="sign" class="right">Signup</a>
+  <ul style="float: right;list-style: none;">
+        <li>  <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal1">
+   
+  <i class="fa fa-shopping-cart" aria-hidden="true" data-toggle="modal" data-target="#myModal1" id="carti"></i>
+ Cart</li></button>
+      </ul>
+  <input style="float:right;padding: 12px;"type="text" class = "right"placeholder="Search.." name="search">
+  <button style="float:right;padding: 12px;"class="right" type="submit"><i class="fa fa-search"></i></button>
+
+</div>
+
+
+<h2 style="text-align:center">Product Card</h2>
+
+<div class="card">
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="sh1.jpg" alt="Los Angeles" width="700" height="900">
+    </div>
+    <div class="carousel-item">
+      <img src="sh2.jpg" alt="Chicago" width="700" height="900">
+    </div>
+   
+  </div>
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+
+
+  
+  <h1>adidas</h1>
+  <p class="price">$19.99</p>
+  <p>Crafted to perfection with studs for superior ball control and firm grip on artificial grass and hard ground, this pair of white ‘Nemeziz 17.4 TF’ football shoes from adidas will let your little buddy be the champion of every match. Effortlessly stylish for its all-over graphic stripes and eye-catching 3-stripes, this pair of shoes has flexible, traction-configured synthetic upper that ensure ultimate ball control. </p>
+  <p><button>Add to Cart</button></p>
+
+<table style="border-style: none;text-align: justify-all;">
+  <p>Shoe CareSurface Dirt can be cleaned with a good quality brush or a damp cloth.</p>
+
+    <p>Material & CareSurface Dirt can be cleaned with a good quality brush or a damp cloth.
+    <tr>
+    <th>Manufacturer Detail : </th><th>
+
+    Imported By: Adidas India Marketing Private Ltd. Office No.6, 2Nd Floor, Sector-B, Pocket-7, Plot No-11, Vasant Kunj, New Delhi-110070</th></tr>
+    <tr >
+    <th>Orgin</th><th>Cambodia</th></tr>
+    <tr><th>Cleats</th><th> Fixed</th></tr>
+    <tr><th>Warranty</th><th> 3 months</th></tr>
+    <tr><th>Material</th><th>Synthetic</th></tr>
+    <tr><th>Product Code</th><th> 5551338</th></tr>
+</table>
+</div>
+</div>
+
+
+
+  </div>
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header" style="padding:35px 50px;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+        </div>
+        <div class="modal-body" style="padding:40px 50px;">
+          <form role="form">
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+              <input type="text" class="form-control" id="psw" placeholder="Enter password">
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="" checked>Remember me</label>
+            </div>
+              <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+          <p>Not a member? <a href="#">Sign Up</a></p>
+          <p>Forgot <a href="#">Password?</a></p>
+        </div>
+      </div>
+
+  </div> 
+</div>
+<div class="modal fade" id="myModal1">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Responsive Checkout Form</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+<div class="modal-body">
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form action="/action_page.php">
+      
+        <div class="row">
+          <div class="col-50">
+            <h3>Billing Address</h3>
+            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" placeholder="john@example.com"><br>
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street"><br>
+            <label for="city"><i class="fa fa-institution"></i> City</label>
+            <input type="text" id="city" name="city" placeholder="New York">
+            <div class="container">
+            <div class="row">
+              <div class="col-50">
+                <label for="state">State</label><br>
+                <input type="text" id="state" name="state" placeholder="NY"><br>
+              </div>
+              <div class="col-50">
+                <label for="zip">Zip</label><br>
+                <input type="text" id="zip" name="zip" placeholder="10001">
+              </div>
+            </div>
+          </div>
+        </div>
+
+          <div class="col-50">
+            <h3>Payment</h3>
+            <label for="fname">Accepted Cards</label>
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+            <label for="cname">Name on Card</label>
+            <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+            <label for="ccnum">Credit card number</label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444"><br>
+            <label for="expmonth">Exp Month</label>
+            <input type="text" id="expmonth" name="expmonth" placeholder="September"><br>
+         
+              <div class="col-50">
+             
+                <label for="expyear">Exp Year</label>
+                <input type="text" id="expyear" name="expyear" placeholder="2018">
+              </div>
+              <div class="col-50">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="352">
+              </div>
+          
+          </div>
+          </div>
+          
+        </div>
+        <label>
+          <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+        </label>
+        <input type="submit" value="Continue to checkout" class="btn">
+      </form>
+    </div>
+  </div>
+  <div class="col-25">
+    <div class="container">
+      <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
+      <p><a href="#">Product 1</a> <span class="price">$15</span></p>
+      <p><a href="#">Product 2</a> <span class="price">$5</span></p>
+      <p><a href="#">Product 3</a> <span class="price">$8</span></p>
+      <p><a href="#">Product 4</a> <span class="price">$2</span></p>
+      <hr>
+      <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideDown("slow");
+  });
+});
+$(document).ready(function(){
+  $("#sign").click(function(){
+    $("#myModal").modal();
+  });
+});
+$(document).ready(function(){
+  $("#carti").click(function(){
+    $("#myModal1").modal();
+  });
+});
+
+        var cart = [];
+        $(function () {
+            if (localStorage.cart)
+            {
+                cart = JSON.parse(localStorage.cart);
+                showCart();
+            }
+        });
+
+        function addToCart() {
+            var price = $("#products").val();
+            var name = $("#products option:selected").text();
+            var qty = $("#qty").val();
+
+            // update qty if product is already present
+            for (var i in cart) {
+                if(cart[i].Product == name)
+                {
+                    cart[i].Qty = qty;
+                    showCart();
+                    saveCart();
+                    return;
+                }
+            }
+            // create JavaScript Object
+            var item = { Product: name,  Price: price, Qty: qty }; 
+            cart.push(item);
+            saveCart();
+            showCart();
+        }
+
+        function deleteItem(index){
+            cart.splice(index,1); // delete item at index
+            showCart();
+            saveCart();
+        }
+
+        function saveCart() {
+            if ( window.localStorage)
+            {
+                localStorage.cart = JSON.stringify(cart);
+            }
+        }
+
+        function showCart() {
+            if (cart.length == 0) {
+                $("#cart").css("visibility", "hidden");
+                return;
+            }
+
+            $("#cart").css("visibility", "visible");
+            $("#cartBody").empty();
+            for (var i in cart) {
+                var item = cart[i];
+                var row = "<tr><td>" + item.Product + "</td><td>" +
+                             item.Price + "</td><td>" + item.Qty + "</td><td>"
+                             + item.Qty * item.Price + "</td><td>"
+                             + "<button onclick='deleteItem(" + i + ")'>Delete</button></td></tr>";
+                $("#cartBody").append(row);
+            }
+        }
+
+</script>
+</body>
+</html>

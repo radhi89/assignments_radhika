@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sample Table</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+table ,th,td{
+  font-family:'Georgia', serif;
+  border-collapse: collapse;
+
+  
+}
+table td {
+    border-left: 1px solid #b8b894;
+    border-right: 1px solid #b8b894;
+}
+
+table td:first-child {
+    border-left: none;
+}
+
+table td:last-child {
+    border-right: none;
+}
+th{
+	border: 1px solid #b8b894;
+	background-color: #33cc33;
+	font-size:20px;
+	font-weight: bold;
+	color: white;
+}
+td{
+	font-size: 17px;
+}
+td, th {
+  
+  text-align: left;
+  padding: 10px;
+
+}
+
+tr:nth-child(odd){background-color: #f2f2f2;}
+
+</style>
+</head>
+<style type="text/css">
+	table{
+		  padding-top: 8px;
+  padding-bottom: 8px;
+  
+  
+	}
+	table{
+    table-layout: fixed;
+    width: 700px;
+}
+	tr:hover {background-color: #ddd;}
+</style>
+<body>
+
+	<h2>Table</h2>
+	<table align="center">
+		<tr>
+			<th>Contact Name</th>
+			<th>City</th>
+			<th>Country</th>
+			<th>Is Promoted?</th>
+		</tr>
+		<tr>
+			<td>Maria Andres</td>
+			<td>Berlin</td>
+			<td><img src="flag-400.png" width="30%" height="20%">Germany</td>
+			<td><input type="checkbox"></td>
+		</tr>
+		<tr>
+			<td>Anna Trujillo</td>
+			<td>Mexico D.F</td>
+			<td ><img src="mexico.png" width="30%" height="20%">Mexico</td>
+			<td><input type="checkbox" checked></td>
+		</tr>
+		<tr>
+			<td>Antonio Moreno</td>
+			<td>Mexico D.F</td>
+			<td><img src="mexico.png" width="30%" height="20%">Mexico</td>
+			<td><input type="checkbox"></td>
+		</tr>
+		<tr>
+			<td>Thomas Hardy</td>
+			<td>London</td>
+			<td><img src="uk.png" width="30%" height="20%">UK</td>
+			<td><input type="checkbox"></td>
+		</tr>
+
+	</table>
+
+</body>
+</html>

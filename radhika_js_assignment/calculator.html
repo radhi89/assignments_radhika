@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calculator</title>
+ <script> 
+         //function that display value 
+         function dis(val) 
+         { 
+             document.getElementById("result").value+=val; 
+         } 
+           
+         //function that evaluates the digit and return result 
+         function solve() 
+         { 
+             var x = document.getElementById("result").value;
+             var y = eval(x) 
+             document.getElementById("result").value = y 
+         } 
+           
+         //function that clear the display 
+         function clr() 
+         { 
+             document.getElementById("result").value = "" 
+         } 
+      </script> 
+ <style> 
+ 		table, td, th {  
+  		border: 1px solid #ddd;
+  		
+		}
+
+		table {
+  		border-collapse: collapse;
+  		
+  		margin-right: 30px;
+  		margin-left: 400px;
+		}
+
+		th, td {
+  		padding: 20px;
+		}
+         .title{ 
+         margin-bottom: 20px; 
+         text-align:center; 
+         width: 100%; 
+         color:black; 
+         font-size: 30px;
+         font-weight: bold;
+
+       
+         } 
+  
+         input[type="button"]{
+  		background-color: white;
+  		color: black;
+  		width: 100%;
+  		padding: 20px;
+  		border: 2px solid #555555;
+		}
+
+		input[type="button"]:hover {
+  		background-color: #555555;
+  		color: white;
+  		width: 100%;
+		}
+  
+         input[type="text"] 
+         { 
+         background-color:white; 
+         height: 20px;
+         width:100% 
+         font-weight:bold;
+         font-size: 20px;
+         } 
+      </style>
+      </head> 
+ <body> 
+      <div class = title >Calculator</div> 
+      <table border="1"> 
+         <tr> 
+            <td colspan="3"><input type="text" id="result"/></td> 
+            <!-- clr() function will call clr to clear all value -->
+            <td ><input type="button" style="background-color: orange;" value="c" onclick="clr()"/> </td> 
+         </tr> 
+         <tr> 
+            <!-- create button and assign value to each button -->
+            <!-- dis("1") will call function dis to display value -->
+            <td><input type="button" value="1" onclick="dis('1')"/> </td> 
+            <td><input type="button" value="2" onclick="dis('2')"/> </td> 
+            <td><input type="button" value="3" onclick="dis('3')"/> </td> 
+            <td><input type="button" value="/" onclick="dis('/')"/> </td> 
+         </tr> 
+         <tr> 
+            <td><input type="button" value="4" onclick="dis('4')"/> </td> 
+            <td><input type="button" value="5" onclick="dis('5')"/> </td> 
+            <td><input type="button" value="6" onclick="dis('6')"/> </td> 
+            <td><input type="button" value="-" onclick="dis('-')"/> </td> 
+         </tr> 
+         <tr> 
+            <td><input type="button" value="7" onclick="dis('7')"/> </td> 
+            <td><input type="button" value="8" onclick="dis('8')"/> </td> 
+            <td><input type="button" value="9" onclick="dis('9')"/> </td> 
+            <td><input type="button" value="+" onclick="dis('+')"/> </td> 
+         </tr> 
+         <tr> 
+            <td><input type="button" value="." onclick="dis('.')"/> </td> 
+            <td><input type="button" value="0" onclick="dis('0')"/> </td> 
+            <!-- solve function call function solve to evaluate value -->
+            <td><input type="button" value="=" onclick="solve()"/> </td> 
+            <td><input type="button" value="*" onclick="dis('*')"/> </td> 
+         </tr> 
+      </table> 
+ 
+</body>
+</html>

@@ -1,0 +1,133 @@
+/* Logo */
+
+.head-logo {display:block; text-indent:-999em; width:122px; height: 50px; background: url('../images/bloom-logo.png') no-repeat 0 0; }
+
+
+/* Colours */
+
+.greybg 	{background-color:#f1f1f1;}
+.darkgreybg {background-color:#2f2f2f;}
+.whitebg 	{background-color:#ffffff;}
+
+
+/* Containers  && Custom Scaffolding */
+.content{
+
+	box-sizing: content-box;  
+padding-right: 100px;
+  padding-left: 100px;
+}
+.header-container {
+	min-height:103px;
+	border-bottom:solid 1px #7d7d7d;
+	border-radius:0;
+	margin-bottom: 0;
+	padding-top: 21px;
+}
+
+.feature-post-container {
+	
+	min-height:300px;
+	padding-top: 58px;
+	padding-bottom:58px;
+
+}
+
+.featured-col-container {
+	min-height: 520px; 
+	padding-top: 62px; 
+	padding-bottom: 70px;
+}
+
+.footer-container {
+	min-height: 346px;
+	padding-top:72px;
+	padding-bottom: 50px;
+}
+
+.footer-base-txt {
+
+	padding-top:30px;
+	padding-bottom:30px;
+
+}
+
+
+
+/* ----------- featured-col-container ----------*/ 
+
+.featured-col-container h1 {margin-top:0; margin-bottom: 20px;}
+
+.btn-primary {
+	margin-bottom:10px;
+	text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ----------- footer container ----------*/ 
+
+.footer-container {color:#fff;}
+
+.footer-container h2 {margin-bottom:25px;}
+
+.footer-container p
+{margin:0; padding:0;}
+
+
+
+.footer-container ul 	{list-style:none;padding:0;margin:0; width:100%;}
+.footer-container ul li {display:block;clear:both;}
+
+
+/* ----------- Latest post list ----------*/ 
+
+.date-cube-container 	{
+							width:55px; height: 55px;
+							padding:10px 5px 5px 5px;
+							color:#0e1d1f;
+							margin-right:10px; 
+							margin-bottom:10px;
+							-webkit-border-radius: 5px;
+							-moz-border-radius: 5px;
+							border-radius: 5px;
+						}
+
+.date-cube-container p	{padding:0; margin:0;}
+.date-cube-container h3	{padding:0;}
+
+.date-name 				{font-size: 12px; text-transform: uppercase;}
+.date-number			{font-weight:bold; font-size: 18px; line-height:20px;}
+
+
+.post-desc-container	{}
+.post-desc-container h3	{margin:6px 0 12px 0;}
+.post-desc-container p	{}
+
+.post-title				{font-size: 14px; line-height:16px; font-weight:bold;}
+
+.post-title	a {color:#ffffff;} 
+.post-title	a:hover
+{color:#cccccc;text-decoration:none;}
+
+.post-desc				{font-size: 12px; line-height:14px;}
+
+
+/* ----------- Social Links list ----------*/ 
+
+.social_link {
+				background: url('../images/bloom-fb.png') no-repeat 0 0; 
+				padding-left: 46px;
+				margin-bottom:10px;
+				height:30px;
+				display:block;
+				line-height:30px;
+				color:#fff;
+				text-decoration:none;
+}
+
+.social_link:hover {text-decoration:none;color:#ccc;}
+
+.connect_fb {background-image: url('../images/bloom-fb.png');}
+.connect_tw {background-image: url('../images/bloom-tw.png');}
+.connect_rs {background-image: url('../images/bloom-rs.png');}
+.connect_gp {background-image: url('../images/bloom-gp.png');}

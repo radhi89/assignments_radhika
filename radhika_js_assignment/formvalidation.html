@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sample Form</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+input:invalid {
+  border: 1px solid red;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 680px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<form action="#" method="post" name="form1">
+<fieldset>
+	<legend>Personal Details:</legend>
+<div class="container">
+<div class="row">
+    <div class="col-25">
+      <label for="fname">First Name : </label>
+    </div>
+    <div class="col-75">
+     <input type="text" name="fname" id = "fname"  placeholder="Your name.." required>
+ </div>
+</div>
+
+<div class="row">
+    <div class="col-25">
+      <label for="mail">Email Id :</label>
+    </div>
+    <div class="col-75">
+	 <input type="Email" id = "mail" onchange ="ValidateEmail()"  name="mail" placeholder="Your Email id ..." required>
+	</div>
+</div>
+
+<div class="row">
+    <div class="col-25">
+      <label for="age">Age :</label>
+    </div>
+    <div class="col-75">
+	<input type="number" id = "age"  name="age" placeholder="age" min="0" max = "110" required>
+	</div>
+</div>
+
+<div class="row">
+    <div class="col-25">
+      <label for="mob">Mobile Number:</label>
+    </div>
+    <div class="col-75">
+		<input type="number" id = "mob" onchange ="MobileValidity()" placeholder="+91-" name="mob">
+	</div>
+</div>
+<br>
+<br>
+
+<div class="row">
+	<input type="submit" onclick="myFunction()" value="Submit">
+</div>
+</div>
+
+
+</fieldset>
+</form>
+
+
+<script>
+
+function MobileValidity(){
+
+		var inputtxt = document.getElementById("mob").value;
+       var phno=/^(((0|((\+)?91(\-)?))|((\((\+)?91\)(\-)?)))?[7-9]{1}\d{9})?$/;
+       if(!inputtxt.match(phno))
+       {
+        alert("not a valid number");
+       }
+       else
+       {
+        alert("valid Mobile No");
+       }
+   }
+
+
+function myFunction() {
+    var inpObj = document.getElementById("age");
+    if (!inpObj.checkValidity()) {
+    alert(inpObj.validationMessage);
+  } else {
+    alert("Input OK") ;
+  } 
+} 
+
+
+function ValidateEmail()
+{
+var inputText = document.getElementById("mail");
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+if(inputText.value.match(mailformat))
+{
+document.form1.mail.focus();
+return true;
+}
+else
+{
+alert("You have entered an invalid email address!");
+document.form1.mail.focus();
+return false;
+}
+}
+</script>
+</script>
+</body>
+</html>

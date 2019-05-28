@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>manual clock</title>
+<script type="text/javascript">
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
+<style type="text/css">
+ .header {
+  padding: 100px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  height:100px;
+  font-size: 60px;
+}
+</style>
+</head>
+<body>
+	<div id = "txt" class="header">
+<button style="text-align:center" onclick="startTime()" class="btn btn-primary">Display Clock</button>
+</div>
+</body>
+</html>
