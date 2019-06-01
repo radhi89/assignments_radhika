@@ -18,7 +18,7 @@ r = requests.get(posts)
 p = requests.get(comment)
 data = r.json()
 comments = p.json()
-
+comm = {}
 def Posts():
 	print("Posts :",data)
 	detail = [data[i]['title'] for i in range(0,len(data))]
@@ -28,21 +28,22 @@ def user_post(x):
 	if(x<=len(data)):
 		print("Post based on User {} : {} ".format(x,data[x]['title']))
 
-def comment_detail(c):
+def comment_detail():
 	print(comments)
 	c_detail = [comments[i]['body'] for i in range(0,len(comments))]
 	print("Comments :",c_detail)
-	k = [comments[i]['postId'] for i in range(0,len(comments))]
-	
-	print(k)
 
+	k = [comments[i]['postId'] for i in range(0,len(comments))]
+	for i in k:
+		comm[i]=c_detail
+	print(" postId : comment :{} ".format(k,comm))
 
 
 
 
 Posts()
 x = int(input("enter user id:"))
-c = int(input("enter the post id:"))
+
 user_post(x)
-comment_detail(c)
+comment_detail()
 
