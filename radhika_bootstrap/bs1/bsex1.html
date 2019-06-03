@@ -1,175 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<title>BS4 Website Layout</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
- <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
 
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <title>Bloom website </title>
 
-<!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Latest compiled JavaScript -->
+
+    <!-- Custom styles for this template -->
+    <link href="css/template.css" rel="stylesheet">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+
+  </head>
 <style type="text/css">
-.header {
-  background-color: black;
-  padding: 20px;
-  text-align: left;
-  font-family: 'Antiqua';
-}
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-}
-/* Left and right column */
-
-.footer {
-  
-  text-align: center;
-  background: black;
-  
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-
-  
-   text-align: center;
-}
-}
-#a_1:link {
-  color: pink;
-  background-color: transparent;
-  text-decoration: none;
-
-}
-#a_1:visited {
-  color: darkorange;
-  background-color: transparent;
-  text-decoration: none;
-}
-#a_1:hover {
-  color: red;
-  background-color: transparent;
-  text-decoration: underline;
-}
-#a_1:active {
-  color: yellow;
-  background-color: transparent;
-  text-decoration: underline;
-}
-img{
-  float: left;
-}
+  p{
+    text-align: justify;
+  }
 </style>
-</head>
-<body>
-<div class="header" style="margin-bottom:0">
-  <h1><a href="#" style="text-decoration: none;"><h1><span style="color:white;">HTML</span><span style="color:orange;font-size: 50px;"><b>5</b></span></h1></a></h1>
-  
-</div>
+  <body>
 
-<nav class="navbar navbar-expand-sm bg-secondary navbar-light">
- 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link1</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link2</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link3</a>
-      </li>    
-       <li class="nav-item">
-        <a class="nav-link" href="#">Link4</a>
-      </li> 
-       <li class="nav-item">
-        <a class="nav-link" href="#">Link5</a>
-      </li> 
-    </ul>
-  </div>  
-</nav>
-<div class="container-fluid">
-<div class="row">
-<div class="col-lg-9">
+    <div class="navbar navbar-inverse darkgreybg header-container">
+      <div class="container">
+        <div class="content">
 
-      <div class="card"  style="border:none;">
-    <div class="card-body">
-      <p><img src="subpost-image.jpg" alt="Pineapple" style="width:100px;height:100px;margin-right:10px;"></p>
-      <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-      <a href="#" id="a_1" target="_blank">Read More...</a></div>
-  </div>
-      <hr>
-<div class="card"  style="border:none;">
-    <div class="card-body">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
 
-     <p><img src="subpost-image.jpg" alt="Pineapple" style="width:100px;height:100px;margin-right:15px;"></p>
-      <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-      <a href="#" id="a_1" target="_blank">Read More...</a>
-       </div>
-     </div>
-      
-<hr>
-    <div class="card"  style="border:none;">
-      <div class="card-body">
- 
-      <p><img src="subpost-image.jpg" alt="Pineapple" style="width:100px;height:100px;margin-right:15px;"></p>
-      <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-      <a href="#" id="a_1" target="_blank">Read More...</a>
+          <a class="head-logo" href="#">Bloom Web Design</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#Services">Services</a></li>
+            <li><a href="#Portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+      </div>
     </div>
-    <hr>
-  </div>
-</div>
- 
 
-<div class="col-lg-3" style="background-color: lightgrey;color: black;">
-    
-    <h3>Side bar Links</h3>
-    <hr>
 
-      <ul style="list-style-type:none;">
-        <li ><a id="a_1" href="#">List1</a></li>
-        <li><a href="#" id="a_1">List2</a></li>
-        <li><a href="#" id="a_1">List3</a></li>
-        <li ><a href="#" id="a_1">List4</a></li>
-      
-      </ul>
+
+
    
-    
-    
-      <h3>Other Widgets</h3>
-      <hr>
-      <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. </p>
-      <p>Lorem Ipsum in Photoshop CC 2014. The newest version of Photoshop includes the ability to paste dummy text into a text layer.</p>
-     
+       <div class="jumbotron">
+       
+ <div class="container">
+       <div class="row">
+
+       
+
       
 
+          <div class="col-sm-6">
+
+
+            <h2 style="font-size: 30px;">Lorem ipsum dolor sit amet</h2>
+            <br>
+            <p style="font-size: 16px;">
+           Vestibulum pulvinar tincidunt placerat. Nulla porta porttitor sem, a ultrices magna feugiat quis. Nam ac diam ac libero posuere lacinia eget et libero.<br>
+            Cras pretium odio eget felis consequat, ut adipiscing enim suscipit. Suspendisse hendrerit sapien blandit nisi sagittis dictum. 
+            </p>
+         
+
+             <a href="#"  class="btn btn-primary">Learn More</a>
+   
+          </div> <!-- /.col-md-12 -->
+
+          <div class="col-sm-6">
+
+            <a href="#" target="_blank" class="pull-right">
+                <img src="images/bloom-slide-1.png"  class = "img-fluid" width="350" height="180" alt="" title="">
+            </a>
+
+
+      <!-- /.col-md-12 -->
+      
 </div>
-</div>
+
+    </div><!-- /.container -->
+
+ </div> <!-- /featured-post-container -->
 
 </div>
 
+
+    <div class="container">
+
+      <div class="row">
+    
+         <div class="col-md-12"><h1>This is a Heading</h1> </div>
+
+
+</div>
+     
   
-<div class="footer">
-  <p style="color:white;font-size: 12px;">Copyright<span style="color:orange;font-size: 12px;"><em>YourWebsite</em></span>.All rights reserved</p>
+
+      <div class="row">
+
+      <div class="col-md-4">
+    
+
+            <img class="img-fluid"src="images/test1.jpg" alt="Sub Post image 1" title="Sub Post image 1" width="263" height="195"/>
+            <h2>Aliquam et iaculis sapien</h2>
+            <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nisi nisl, bibendum et feugiat eu, vehicula ac nulla. </p>
+            <a href="#"  class="btn btn-primary">Learn More</a>
+     
+      </div> <!-- /.col-md-4 -->
+     
+
+     <div class="col-md-4">
+
+          <img src="images/test.jpg" class="img-fluid"alt="Sub Post image 1" title="Sub Post image 1" width="263" height="195"/>
+          <h2>Aliquam et iaculis sapien</h2>
+          <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nisi nisl, bibendum et feugiat eu, vehicula ac nulla. </p>
+          <a href="#"  class="btn btn-primary">Learn More</a>
+
+
+      </div> <!-- /.col-md-4 -->
+
+     <div class="col-md-4">
+
+          <img src="images/test2.jpg" class="img-fluid"alt="Sub Post image 1" title="Sub Post image 1" width="263" height="195"/>
+          <h2>Aliquam et iaculis sapien</h2>
+          <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nisi nisl, bibendum et feugiat eu, vehicula ac nulla. </p>
+          <a href="#"  class="btn btn-primary">Learn More</a>
+
+     
+      </div> <!-- /.col-md-4 -->
+
+     </div> <!-- /.row -->
+
+    </div><!-- /.container -->
+
+
+ <div class="container-fluid">
+<div class="footer-container darkgreybg">
+
+    <div class="container">
+      <div class="content">
+<div class="card bg-dark text-white">
+  <div class="card-body">
+      <div class="row">
+        <div class="col-md-4">
+          
+          <h3>Latest Posts</h3>
+
+          <ul class="pull-left">
+
+            <li>
+
+      
+
+                <h3 class="post-title"><a href="#" target="_blank">Aliquam et iaculis sapien</a></h3>
+                 <p  class="post-desc" style="text-align: justify;">Vestibulum pulvinar tincidunt placerat. </p>
+
+      
+
+            </li>
+
+            <li>
+
+              
+             
+
+                <h3 class="post-title"><a href="#" target="_blank">Aliquam et iaculis sapien</a></h3>
+                
+                <p  class="post-desc">Vestibulum pulvinar tincidunt placerat. </p>
+
+
+            </li>
+
+            <li>
+
+              
+
+             
+
+                <h3 class="post-title"><a href="#" target="_blank">Aliquam et iaculis sapien</a></h3>
+                <p  class="post-desc" style="text-align: justify;">Vestibulum pulvinar tincidunt placerat. </p>
+
+            
+
+            </li>
+
+
+
+
+
+
+          </ul>
+       
+     
+       </div>
+<br>
+        <div class="col-md-6">
+
+          <h3>About</h3>
+          <p style="text-align: justify;">Vestibulum pulvinar tincidunt placerat. Nulla porta porttitor sem, a ultrices magna feugiat quis. Nam ac diam ac libero posuere lacinia eget et libero. Cras pretium odio eget felis consequat, ut adipiscing enim suscipit. <br>
+Suspendisse hendrerit sapien blandit nisi sagittis dictum. Vivamus arcu nisi, tristique ut lacus eu, aliquet varius odio. </p>
+       
+     
+       </div>
+
+       <div class="col-md-2">
+
+         <h4>Stay Connected</h4>
+
+         <ul class="pull-right">
+
+          <li><a href="https://www.facebook.com/pages/Bloom-Web-Design/166346633389670" target="_blank" class="connect_fb social_link">Facebook</a></li>
+          <li><a href="https://twitter.com/BloomWebDesign" target="_blank" class="connect_tw social_link">Twitter</a></li>
+          <li><a href="http://feeds.feedburner.com/bloomwebdesign/blog" target="_blank" class="connect_rs social_link">RSS</a></li>
+          <li><a href="" target="_blank" class="connect_gp social_link">Google+</a></li>
+
+         </ul>
+       
+     </div>
+   </div>
+       </div>
+
+      </div> <!-- /.row -->
+
+    </div><!-- /.container -->
+ </div>
+
+
+
+
 </div>
 
 
 
 
 
-</body>
+
+  </body>
 </html>
