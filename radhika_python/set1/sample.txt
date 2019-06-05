@@ -1,5 +1,0 @@
-Hello world!
-New Job
-New Place
-Excited
-Love Python
